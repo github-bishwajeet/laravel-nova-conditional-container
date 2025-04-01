@@ -37,10 +37,10 @@ trait HasConditionalContainer
      * @param NovaRequest $request
      * @return array
      */
-    public function availablePanelsForDetail(NovaRequest $request, Resource $resource)
+    public function availablePanelsForDetail(NovaRequest $request, Resource $resource, ?FieldCollection $fields = null)
     {
-        $panels = parent::availablePanelsForDetail($request, $resource);
-        $fields = parent::availableFields($request);
+        $panels = parent::availablePanelsForDetail($request, $resource, $fields);
+        $fields = parent::availableFields($request, $fields);
 
         return $this->mergePanels($panels, $this->findAllActiveContainers($fields, $this));
     }
@@ -52,10 +52,10 @@ trait HasConditionalContainer
      *
      * @return array
      */
-    public function availablePanelsForCreate($request)
+    public function availablePanelsForCreate($request, ?FieldCollection $fields = null)
     {
-        $panels = parent::availablePanelsForCreate($request);
-        $fields = parent::availableFields($request);
+        $panels = parent::availablePanelsForCreate($request, $fields);
+        $fields = parent::availableFields($request, $fields);
 
         return $this->mergePanels($panels, $this->findAllContainers($fields));
     }
@@ -67,10 +67,10 @@ trait HasConditionalContainer
      *
      * @return array
      */
-    public function availablePanelsForUpdate(NovaRequest $request, Resource $resource = null)
+    public function availablePanelsForUpdate(NovaRequest $request, Resource $resource = null, ?FieldCollection $fields = null)
     {
-        $panels = parent::availablePanelsForUpdate($request, $resource);
-        $fields = parent::availableFields($request);
+        $panels = parent::availablePanelsForUpdate($request, $resource, $fields);
+        $fields = parent::availableFields($request, $fields);
 
         return $this->mergePanels($panels, $this->findAllContainers($fields));
     }
@@ -124,7 +124,7 @@ trait HasConditionalContainer
              */
             foreach ($containers as $container) {
 
-                $container->fields = $this->$cleanUpMethodName(
+                $container->fields = $this->{$cleanUpMethodName}(
                     $request, new FieldCollection($this->filter($container->fields->toArray()))
                 )->values();
 
