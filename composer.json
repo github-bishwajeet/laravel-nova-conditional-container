@@ -1,5 +1,5 @@
 {
-    "name": "digital-creative/conditional-container",
+    "name": "github-bishwajeet/laravel-nova-conditional-container",
     "description": "Provides an easy way to conditionally show and hide fields in your Nova resources.",
     "keywords": [
         "laravel",
@@ -10,23 +10,23 @@
     ],
     "authors": [
         {
-            "name": "Rafael Milewski"
+            "name": "Bishwajeet Kumar"
         }
     ],
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
-        "laravel/nova": "^3.12.0"
+        "laravel/nova": ">=3.12.0"
     },
     "autoload": {
         "psr-4": {
-            "DigitalCreative\\ConditionalContainer\\": "src/"
+            "Jeet\\ConditionalContainer\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "DigitalCreative\\ConditionalContainer\\ConditionalContainerServiceProvider"
+                "Jeet\\ConditionalContainer\\ConditionalContainerServiceProvider"
             ]
         }
     },

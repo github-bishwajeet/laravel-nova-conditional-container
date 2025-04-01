@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitalCreative\ConditionalContainer;
+namespace Jeet\ConditionalContainer;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
@@ -313,7 +313,7 @@ class ConditionalContainer extends Field
                     !$field instanceof \Benjacho\BelongsToManyField\BelongsToManyField &&
                     !$field instanceof \Ebess\AdvancedNovaMediaLibrary\Fields\Media &&
                     !$field instanceof \Ebess\AdvancedNovaMediaLibrary\Fields\Files &&
-                    !$field instanceof \DigitalCreative\ConditionalContainer\ConditionalContainer) {
+                    !$field instanceof \Jeet\ConditionalContainer\ConditionalContainer) {
 
                     $resource->setAttribute($field->attribute, $field->value);
 

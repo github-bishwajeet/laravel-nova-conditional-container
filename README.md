@@ -1,8 +1,8 @@
 # Conditional Container
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/digital-creative/conditional-container)](https://packagist.org/packages/digital-creative/conditional-container)
-[![Total Downloads](https://img.shields.io/packagist/dt/digital-creative/conditional-container)](https://packagist.org/packages/digital-creative/conditional-container)
-[![License](https://img.shields.io/packagist/l/digital-creative/conditional-container)](https://github.com/dcasia/conditional-container/blob/master/LICENSE)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/github-bishwajeet/laravel-nova-conditional-container)](https://packagist.org/packages/github-bishwajeet/laravel-nova-conditional-container)
+[![Total Downloads](https://img.shields.io/packagist/dt/github-bishwajeet/laravel-nova-conditional-container)](https://packagist.org/packages/github-bishwajeet/laravel-nova-conditional-container)
+[![License](https://img.shields.io/packagist/l/github-bishwajeet/laravel-nova-conditional-container)](https://github.com/dcasia/conditional-container/blob/master/LICENSE)
 
 ![Laravel Nova Conditional Container in action](https://raw.githubusercontent.com/dcasia/conditional-container/master/demo.gif)
 
@@ -13,7 +13,7 @@ Provides an easy way to conditionally show and hide fields in your Nova resource
 You can install the package via composer:
 
 ```
-composer require digital-creative/conditional-container
+composer require github-bishwajeet/laravel-nova-conditional-container
 ```
 
 ## Usage
@@ -22,8 +22,8 @@ Basic demo showing the power of this field:
 
 ```php
 
-use DigitalCreative\ConditionalContainer\ConditionalContainer;
-use DigitalCreative\ConditionalContainer\HasConditionalContainer;
+use Jeet\ConditionalContainer\ConditionalContainer;
+use Jeet\ConditionalContainer\HasConditionalContainer;
 
 class ExampleNovaResource extends Resource {
 

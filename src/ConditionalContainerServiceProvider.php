@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitalCreative\ConditionalContainer;
+namespace Jeet\ConditionalContainer;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;

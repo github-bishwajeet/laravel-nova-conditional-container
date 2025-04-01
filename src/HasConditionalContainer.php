@@ -1,8 +1,8 @@
 <?php
 
-namespace DigitalCreative\ConditionalContainer;
+namespace Jeet\ConditionalContainer;
 
-use DigitalCreative\JsonWrapper\JsonWrapper;
+use Jeet\JsonWrapper\JsonWrapper;
 use Illuminate\Http\Resources\MergeValue;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Contracts\RelatableField;
